@@ -27,7 +27,7 @@ else
     sudo apt-get install -y --only-upgrade libstdc++6
 
     node_ver=$(curl -sL https://unofficial-builds.nodejs.org/download/release/index.tab | grep $ARM | grep -m 1 v$NODE_MAJOR_VERSION | awk '{print $1}')
-    echo "Latest release in the $NODE_MAJOR_VERSION family for $ARM is $node_ver"
+    echo "Latest release in the $NODE_MAJOR_VERSION family for $ARM is $node_ver adsfasdf"
 
     NODE_TAR_FILE="node_release-$node_ver.tar.gz"
 

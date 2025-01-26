@@ -12,15 +12,13 @@ else
 
     cd ~/
 
-    NODE_MAJOR_VERSION="12"
+    NODE_MAJOR_VERSION="22"
     ARM=$(uname -m)
 
     if [[ "$ARM" = "armv7l" ]]
     then
         echo "Original 'ARM' value is: $ARM, so using 'armv6l'"
         ARM="armv6l"
-    if [[ "$ARM" = "aarch64" ]]
-        ARM="arm64"
     fi
 
     info "Installing node"
@@ -33,7 +31,7 @@ else
 
     NODE_TAR_FILE="node_release-$node_ver.tar.gz"
 
-    curl -sL https://unofficial-builds.nodejs.org/download/release/$node_ver/node-$node_ver-linux-$ARM.tar.gz >"$NODE_TAR_FILE"
+    curl -sL https://nodejs.org/download/release/v22.13.1/node-v22.13.1-linux-arm64.tar.gz >"$NODE_TAR_FILE"
     echo "using release tar file = '$NODE_TAR_FILE' and extracting to '/usr/local'"
 
     cd /usr/local

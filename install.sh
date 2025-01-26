@@ -142,7 +142,7 @@ if [ -d "$MAGIC_MIRROR_DIR" ]; then
     git pull origin
     cd > /dev/null
 else
-    git clone "$MAGIC_MIRROR_GIT" "$MAGIC_MIRROR_NAME"
+    git clone --depth=1 "$MAGIC_MIRROR_GIT" "$MAGIC_MIRROR_NAME"
 fi
 
 info 'Cloning "Magic Mirror for Raspbian Lite"'
@@ -153,7 +153,7 @@ if [ -d "$MAGIC_MIRROR_RASP_LITE_DIR" ]; then
     git pull origin
     cd > /dev/null
 else
-    git clone "$MAGIC_MIRROR_RASP_LITE_GIT" "$MM_RASP_LITE"
+    git clone --depth=1 "$MAGIC_MIRROR_RASP_LITE_GIT" "$MM_RASP_LITE"
 fi
 
 info 'Creating app directory'

@@ -19,6 +19,8 @@ else
     then
         echo "Original 'ARM' value is: $ARM, so using 'armv6l'"
         ARM="armv6l"
+    if [[ "$ARM" = "aarch64" ]]
+        ARM="arm64"
     fi
 
     info "Installing node"
